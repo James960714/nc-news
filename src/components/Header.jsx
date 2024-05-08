@@ -5,8 +5,8 @@ return(
 <header id='header'>
      <h1 className='heading'>NC NewsIt</h1>
      <nav>
-          <Link to='/'><button className='headerButton'>Articles</button></Link>
-          <Link to='/profile'><button className='headerButton'>Profile</button></Link>
+          <Link className='headerNavLinks' to='/'>Articles</Link>
+          <Link className='headerNavLinks' to='/profile'>Profile</Link>
      </nav>
 </header>)
 }

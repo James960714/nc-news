@@ -1,16 +1,10 @@
-import getUsers from "../../api";
-import { useState, useEffect } from "react";
 import {Link} from 'react-router-dom'
-const Articles = () => {
 
-    const [articles, setArticles] = useState([])
+const ListOfArticles = ({articles, setArticle}) => {
 
-    useEffect(() => {
-        getUsers().then((articles => {
-            setArticles(articles)
-        }))
-    }, [])
-
+    function handleClick(articleId){
+        setArticle(articleId)
+    }
     return(
         <section>
             <h2 className="heading">Articles</h2>
@@ -18,7 +12,7 @@ const Articles = () => {
                 {articles.map((article) => {
                     return <li id="articlesArticleCards" key={article.article_id}>  
                         <section id="articleCard">
-                            <Link to="/article" id='articleLink'><h4 className="heading">{article.title}</h4></Link>
+                            <Link onClick={() => {handleClick(article.article_id)}} to="/article" id='articleLink'><h4 className="heading">{article.title}</h4></Link>
                             <img id="articlesImg" src={article.article_img_url}></img>
                             <ul id="articlesArticleInfo">
                                 <li key={article.topic}>Topic: {article.topic}</li>  
@@ -30,13 +24,9 @@ const Articles = () => {
                         </section>                        
                     </li>
                 })}
-
             </ul>
-                <p>
-                    {console.log(articles)}
-                </p>
         </section>)
 }
 
-export default Articles;
+export default ListOfArticles;
 
