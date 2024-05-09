@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { getArticle } from "../../../api"
+import { getArticle } from "../../../../api"
 
 const Article = ({articleId}) => {
     const [article, setArticle] = useState({})

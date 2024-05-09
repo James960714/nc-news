@@ -6,8 +6,8 @@ const ncNewsAPI = axios.create({
   
 export const getArticles = () => {
     return ncNewsAPI.get("/api/articles")
-    .then((response)=>{
-       return response.data
+    .then((articles)=>{
+       return articles.data.articles
         })
 }
 
@@ -18,6 +18,12 @@ export const getArticle = (articleId) => {
   })
 }
 
+export const getArticleComments = (articleId) => {
+  return ncNewsAPI.get(`api/articles/${articleId}/comments`)
+  .then((response) => {
+    return response.data
+  })
+}
 
 
  
