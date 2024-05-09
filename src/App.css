@@ -88,15 +88,15 @@ body {
   margin-right: 5%;
   margin-block-end: 1em;
   width: 80%;
-  height: 90%;
+  height: auto;
   max-width: 581px;
   background-color: white;
   border-radius: 10px;
   color: #213547;
   display: grid;
   grid-template-columns: 50% 25% 25%;
-  grid-template-rows: 20% 10% 60% 10%;
-  grid-template-areas: 'articleHeading articleHeading articleHeading' 'author dateCreated dateCreated' 'articleBody articleImg articleImg' 'articleBody likeButton likeButton';
+  grid-template-rows: 20% 10% 50% 10% 10%;
+  grid-template-areas: 'articleHeading articleHeading articleHeading' 'author dateCreated dateCreated' 'articleBody articleImg articleImg' 'articleBody articleVotes likeButton' 'blank articleVotes dislikeButton';
 }
 
 #articleHeading {
@@ -139,11 +139,37 @@ body {
   width: 80%;
   align-self:flex-end;
   justify-self: right;
-  grid-column: 3;
+  grid-area: likeButton;
   text-decoration: underline;
   filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.6));
   font-size: 8px;
-  color:#1119b4ea
+  color: #213547;
+  background-color: aquamarine;
+}
+.dislikeButton {
+  height: 80%;
+  width: 80%;
+  align-self:flex-end;
+  justify-self: right;
+  grid-column: dislikeButton;
+  text-decoration: underline;
+  filter: drop-shadow(5px 5px 7px rgba(0, 0, 0, 0.6));
+  font-size: 8px;
+  color:#213547;
+  background-color: pink;
+}
+
+#articleVotes {
+  grid-area: articleVotes;
+  font-size: 12px;
+  justify-self: right;
+  margin: 0%;
+  margin-left: 5%;
+  align-self: center;
+  font-weight: bold;
+  border-style: solid;
+  padding: 10%;
+  width: 20%
 }
 
 #commentsHeading {
