@@ -5,14 +5,14 @@ const CommentsList = ({articleId}) => {
     const [articleComments, setArticleComments] = useState([])
     const [isLoading, setLoading] = useState(true)
     
-    if(articleId){
+    
         useEffect (() => {
             getArticleComments(articleId).then((fetchedComments) => {
                 setArticleComments(fetchedComments)
                 setLoading(false)
             })
         }, [])
-    }
+    
     if (isLoading) return <p>Loading...</p>
 
     return (

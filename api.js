@@ -25,5 +25,9 @@ export const getArticleComments = (articleId) => {
   })
 }
 
+export const patchVote = (articleId, vote) => {
+  return ncNewsAPI.patch(`api/articles/${articleId}`, {inc_votes: vote})
+}
+
 
  
