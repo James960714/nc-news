@@ -15,7 +15,7 @@ const ListOfArticles = ({articles}) => {
                             <ul id="articlesArticleInfo">
                                 <li key={article.topic}>Topic: {article.topic}</li>  
                                 <li key={article.author}>Author: {article.author}</li>
-                                <li key={article.article_id}>Comments: {article.comment_count}</li>
+                                <li key={article.comment_count}>Comments: {article.comment_count}</li>
                                 <li key={article.votes}>Votes: {article.votes}</li>
                                 <li key={article.created_at}>Created: {article.created_at}</li>
                             </ul>
