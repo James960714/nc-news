@@ -19,10 +19,10 @@ const Article = ({articleId}) => {
 
     const handleVote = (vote) => {
         patchVote(articleId, vote).catch(()=> {
-            setVoteChange((currVoteChange) => {return currVoteChange - vote})
+            setVoteChange((currVoteCount) => {return currVoteCount - vote})
             setErr('Something went wrong, please try again.');
         })
-        setVoteChange((currVoteChange) => {return currVoteChange + vote})
+        setVoteChange((currVoteCount) => {return currVoteCount + vote})
         setErr(null);
     }
 
