@@ -171,6 +171,37 @@ body {
   padding: 10%;
   width: 20%
 }
+#commentPostSection {
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  background-color: white;
+  height: 10rem;
+  padding: 5%;
+  align-content: center;
+}
+#commentPostForm {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: 'commentPostBody commentPostBody' '. commentPostSubmit';
+  gap: 10px
+}
+#commentPostBody {
+  grid-area: commentPostBody;
+  border:#213547;
+  height: 100%;
+  width: 90%;
+  border:#213547;
+  border-style: inset;
+}
+#commentPostSubmit {
+  grid-area: commentPostSubmit;
+  border: #888;
+  height: 80%;
+  align-self:flex-end;
+}
 
 #commentsHeading {
   text-align: left;
@@ -219,6 +250,7 @@ body {
   grid-row: 2;
   font-size: 13px;
   text-align: left;
+  word-wrap: break-word;
 }
 .commentVotes {
   font-size: 12px;
