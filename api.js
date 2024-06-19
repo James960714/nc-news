@@ -37,4 +37,9 @@ export const deleteComment = (commentId) => {
   return ncNewsAPI.delete(`/api/comments/${commentId}`)
 }
 
- 
+export const getTopics = () => {
+  return ncNewsAPI.get("/api/topics")
+  .then((topics)=>{
+     return topics.data.topics
+    })
+}
