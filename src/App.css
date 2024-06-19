@@ -276,7 +276,17 @@ body {
   font-size: 10px;
   margin-right: 5%;
 }
-
+.deletePostButton {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: right;
+  align-self: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 5%;
+  margin-top: 5%;
+  padding:3%
+}
 
 
 
