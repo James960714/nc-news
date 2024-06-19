@@ -33,5 +33,8 @@ export const postComment = (articleId, comment) => {
   return ncNewsAPI.post(`/api/articles/${articleId}/comments`, comment)
 }
 
+export const deleteComment = (commentId) => {
+  return ncNewsAPI.delete(`/api/comments/${commentId}`)
+}
 
  
