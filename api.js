@@ -11,6 +11,13 @@ export const getArticles = () => {
         })
 }
 
+export const getArticlesByTopic = (topic) => {
+  return ncNewsAPI.get(`/api/articles?topic=${topic}`)
+  .then((articles)=>{
+     return articles.data.articles
+      })
+}
+
 export const getArticle = (articleId) => {
   return ncNewsAPI.get(`api/articles/${articleId}`)
   .then((article) => {
@@ -37,4 +44,9 @@ export const deleteComment = (commentId) => {
   return ncNewsAPI.delete(`/api/comments/${commentId}`)
 }
 
- 
+export const getTopics = () => {
+  return ncNewsAPI.get("/api/topics")
+  .then((topics)=>{
+     return topics.data.topics
+    })
+}
