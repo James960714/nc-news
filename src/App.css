@@ -25,10 +25,24 @@ body {
   padding: 10px;
   margin: 10px
 }
-
-.dropdown-menu.show{
-  
+#topicsFilterSection {
+  background-color: white;
+  border-radius: 10px;
+  color: #213547;
+  margin: 30px;
 }
+#topicFiltersHeading {
+  padding-top: 2%;
+  margin: 0%;
+}
+#topicsList {
+  padding-left: 0;
+  padding-bottom: 3%;
+}
+#topicItemLink {
+  margin: 1%
+}
+
 .articlesList {
   background-color: white;
   padding: 0px;
