@@ -25,6 +25,16 @@ body {
   padding: 10px;
   margin: 10px
 }
+#errorDiv{
+  background-color: white;
+  border-radius: 10px;
+  color: #213547;
+  margin: 30px;
+  padding:3%
+}
+#errorMsg{
+  font-weight: bold;
+}
 #topicsFilterSection {
   background-color: white;
   border-radius: 10px;

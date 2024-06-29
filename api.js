@@ -14,8 +14,12 @@ export const getArticles = () => {
 export const getArticlesByTopic = (topic) => {
   return ncNewsAPI.get(`/api/articles?topic=${topic}`)
   .then((articles)=>{
-     return articles.data.articles
-      })
+    return articles.data.articles
+  })
+  .catch((err) => {
+    return Promise.reject(err)
+  })
+  
 }
 
 export const getArticle = (articleId) => {
@@ -23,12 +27,18 @@ export const getArticle = (articleId) => {
   .then((article) => {
     return article.data
   })
+  .catch((err) => {
+    return Promise.reject(err)
+  })
 }
 
 export const getArticleComments = (articleId) => {
   return ncNewsAPI.get(`api/articles/${articleId}/comments`)
   .then((response) => {
     return response.data
+  })
+  .catch((err) => {
+    return Promise.reject(err)
   })
 }
 
@@ -38,6 +48,9 @@ export const patchVote = (articleId, vote) => {
 
 export const postComment = (articleId, comment) => {
   return ncNewsAPI.post(`/api/articles/${articleId}/comments`, comment)
+  .catch((err) => {
+    return Promise.reject(err)
+  })
 }
 
 export const deleteComment = (commentId) => {
